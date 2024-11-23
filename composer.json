@@ -1,0 +1,16 @@
+{
+  "name": "novrian6/php_app",
+  "description": "PHP App",
+  "require": {
+    "php": "^8.1",
+    "phpunit/phpunit": "^9.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  }
+}
