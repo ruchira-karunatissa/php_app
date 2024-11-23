@@ -7,6 +7,6 @@ header('Content-Type: application/json');
 // Dummy response
 echo json_encode([
     'status' => 'success',
-    'message' => 'Hello from Jenkins CI/CD pipeline!'
+    'message' => 'Hello from Jenkins CI/CD pipeline2!'
 ]);
 ?>
