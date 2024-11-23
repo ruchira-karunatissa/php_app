@@ -20,6 +20,6 @@ class ApiTest extends TestCase
         $this->assertArrayHasKey('status', $response);
         $this->assertEquals('success', $response['status']);
         $this->assertArrayHasKey('message', $response);
-        $this->assertEquals('Hello from Jenkins CI/CD pipeline!', $response['message']);
+        $this->assertEquals('Hello from Jenkins CI/CD pipeline2!', $response['message']);
     }
 }
