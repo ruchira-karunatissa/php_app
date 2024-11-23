@@ -1,8 +1,10 @@
-<?php
-// index.php
 
-// Simple API to test Jenkins CI/CD pipeline
-header('Content-Type: application/json');
+
+<?php
+// Check if PHPUnit is running and disable headers for testing
+if (!defined('PHPUNIT_TEST')) {
+    header('Content-Type: application/json');
+}
 
 // Dummy response
 echo json_encode([
