@@ -9,6 +9,6 @@ if (!defined('PHPUNIT_TEST')) {
 // Dummy response
 echo json_encode([
     'status' => 'success',
-    'message' => 'Hello from Jenkins CI/CD pipeline2!'
+    'message' => 'Hello from Jenkins CI/CD pipeline3!'
 ]);
 ?>
