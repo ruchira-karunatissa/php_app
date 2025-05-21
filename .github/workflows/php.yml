@@ -45,7 +45,7 @@ jobs:
     - name: Run PHPUnit tests
       run: |
         echo "Running PHPUnit tests..."
-        vendor/bin/phpunit --configuration phpunit.xml > result.log || true
+        ./vendor/bin/phpunit --configuration phpunit.xml > result.log || true
         cat result.log
         if grep -q "FAILURES!" result.log; then
           echo "Tests failed! Check the log for details."
@@ -53,3 +53,4 @@ jobs:
         else
           echo "Tests passed successfully."
         fi
+      working-directory: ./  # Optional, defaults to repo root
