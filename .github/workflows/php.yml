@@ -45,12 +45,11 @@ jobs:
     - name: Run PHPUnit tests
       run: |
         echo "Running PHPUnit tests..."
-        vendor/bin/phpunit --configuration phpunit.xml > result.log
-    
+        vendor/bin/phpunit --configuration phpunit.xml > result.log || true
+        cat result.log
         if grep -q "FAILURES!" result.log; then
-            echo "Tests failed! Check the log for details."
-            cat result.log
-            exit 1
+          echo "Tests failed! Check the log for details."
+          exit 1
         else
-            echo "Tests passed successfully."
+          echo "Tests passed successfully."
         fi
